@@ -1,85 +1,81 @@
 # Task Manager Web Application
 
-A Flask-based web application for managing tasks with CRUD operations and status tracking.
-
 ![Task Manager Screenshot](image.png)
 
 ## Features
-- Create, Read, Update, and Delete tasks
-- Filter tasks by status (Pending/In Progress/Completed)
-- Modern UI with responsive design
-- SQLite database integration
+- **CRUD Operations**:
+  - Create, Read, Update, and Delete tasks
+  - 🗑️ Delete Task: Click the trash icon
+- **Filtering**: Use status buttons (All/Pending/In Progress/Completed)
+- **Database**: SQLite integration
+- **Responsive Design**: Works on all screen sizes
 
-## Prerequisites
-- Python 3.6+
-- pip package manager
+## Project Structure
+├── app.py # Main Flask application
+├── static/ # Static assets
+│ ├── custom.css # Custom styles
+│ └── custom.js # Interactive scripts
+├── templates/ # HTML templates
+│ ├── base.html # Base template
+│ ├── index.html # Task listing
+│ └── task_form.html # Add/Edit form
+├── database.db # Auto-generated database
+└── README.md # Documentation
 
-## Installation
+Copy
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
-cd YOUR-REPO-NAME
-Install dependencies
+## View Database
+1. Download [DB Browser for SQLite](https://sqlitebrowser.org/)
+2. Open `database.db` file
+3. Navigate to **Browse Data** tab
+4. View the `tasks` table
+
+## Troubleshooting
+- **Missing dependencies**:
+  ```bash
+  pip install flask
+Port conflict:
+
+bash
+Copy
+python app.py --port=5001
+Database issues:
+
+bash
+Copy
+rm database.db && python app.py
+To Run:
+
+Clone repository:
+
+bash
+Copy
+git clone https://github.com/YOUR-USERNAME/REPO-NAME.git
+Install dependencies:
 
 bash
 Copy
 pip install -r requirements.txt
-Initialize the database
+Start application:
 
 bash
 Copy
 python app.py
-Running the Application
-bash
-Copy
-python app.py
-Access the application at:
-http://localhost:5000
-
-Usage
-Create Task: Click "+ New Task" (top-right)
-
-Edit Task: Click the pencil (✏️) icon
-
-Delete Task: Click the trash (🗑️) icon
-
-Filter Tasks: Use status buttons (All/Pending/In Progress/Completed)
-
-Project Structure
-Copy
-├── app.py
-├── static/
-│   ├── custom.css
-│   └── custom.js
-├── templates/
-│   ├── base.html
-│   ├── index.html
-│   └── task_form.html
-├── database.db (auto-generated)
-└── README.md
-View Database
-Install DB Browser for SQLite
-
-Open database.db file
-
-View the tasks table
-
-Troubleshooting
-Missing dependencies: Run pip install flask
-
-Port conflict: Change port in app.py (modify app.run(port=5001))
-
-Database issues: Delete database.db and restart the app
+Visit http://localhost:5000
 
 Copy
 
-**To use this:**
-1. Create a new file named `README.md`
-2. Copy-paste this content
-3. Replace these placeholders:
-   - `YOUR-USERNAME/YOUR-REPO-NAME` with your GitHub details
-   - `image.png` with your actual screenshot filename
-4. Add a `requirements.txt` file using:
-```bash
-pip freeze > requirements.txt
+**Key Improvements**:
+1. Proper code block formatting with triple backticks (```)
+2. Consistent indentation for file structure
+3. Emoji icons for better visual guidance
+4. Clear section headers with hierarchy
+5. Proper bash command formatting
+6. Organized bullet points with sub-items
+
+To use this template:
+1. Replace `YOUR-USERNAME/REPO-NAME` with your GitHub details
+2. Ensure `image.png` exists in your repository
+3. Add a `requirements.txt` file if missing:
+   ```bash
+   pip freeze > requirements.txt
