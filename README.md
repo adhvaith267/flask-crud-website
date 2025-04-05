@@ -23,6 +23,8 @@ A feature-rich task management web application built with Python Flask and SQLit
 ```bash
 git clone https://github.com/adhvaith267/flask-crud-website.git
 cd flask-crud-website
-
+```
+### 2. Run the website
+```bash
 python app.py
-
+```
