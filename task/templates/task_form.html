@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Edit' if task else 'New' }} Task{% endblock %}
+{% block content %}
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h3 class="card-title mb-4">{{ 'Edit Task' if task else 'Create New Task' }}</h3>
+        <form method="POST">
+            <div class="mb-3">
+                <label class="form-label">Title</label>
+                <input type="text" class="form-control" name="title" 
+                       value="{{ task['title'] if task }}" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Description</label>
+                <textarea class="form-control" name="description" rows="3">{{ task['description'] if task }}</textarea>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Status</label>
+                    <select class="form-select" name="status">
+                        {% for status in ['Pending', 'In Progress', 'Completed'] %}
+                        <option value="{{ status }}" {{ 'selected' if task and task['status'] == status }}>
+                            {{ status }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Due Date</label>
+                    <input type="date" class="form-control" name="due_date" 
+                           value="{{ task['due_date'] if task and task['due_date'] }}">
+                </div>
+            </div>
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary">
+                    {{ 'Update' if task else 'Create' }} Task
+                </button>
+                <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
