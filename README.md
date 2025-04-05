@@ -22,7 +22,6 @@
 ├── database.db # Auto-generated database
 └── README.md # Documentation
 
-Copy
 
 ## View Database
 1. Download [DB Browser for SQLite](https://sqlitebrowser.org/)
