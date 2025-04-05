@@ -1,6 +1,5 @@
 # Task Manager Web Application
 
-![Task Manager Screenshot](./image.png) <!-- Replace with your actual screenshot file -->
 
 A feature-rich task management web application built with Python Flask and SQLite.
 
