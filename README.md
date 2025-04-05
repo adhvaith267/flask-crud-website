@@ -1,27 +1,23 @@
-Task Manager Web Application
+# Task Manager Web Application
+
 A Flask-based web application for managing tasks with CRUD operations and status tracking.
 
-Task Manager Screenshot <!-- Add a screenshot here -->
+![Task Manager Screenshot](image.png)
 
-Features
-Create, Read, Update, and Delete tasks
+## Features
+- Create, Read, Update, and Delete tasks
+- Filter tasks by status (Pending/In Progress/Completed)
+- Modern UI with responsive design
+- SQLite database integration
 
-Filter tasks by status (Pending/In Progress/Completed)
+## Prerequisites
+- Python 3.6+
+- pip package manager
 
-Modern UI with responsive design
+## Installation
 
-SQLite database integration
-
-Prerequisites
-Python 3.6+
-
-pip package manager
-
-Installation
-Clone the repository
-
-bash
-Copy
+1. **Clone the repository**
+```bash
 git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
 cd YOUR-REPO-NAME
 Install dependencies
@@ -29,67 +25,61 @@ Install dependencies
 bash
 Copy
 pip install -r requirements.txt
-(If you don't have requirements.txt, use:)
-
-bash
-Copy
-pip install flask
 Initialize the database
 
 bash
 Copy
-python init_db.py  # If you have this file
-(The database will be automatically created when you first run the application if using app.py's init_db function)
-
+python app.py
 Running the Application
 bash
 Copy
 python app.py
-The application will start at:
-
-http
-Copy
+Access the application at:
 http://localhost:5000
-Accessing the Application
-Open your web browser
 
-Visit: http://localhost:5000
+Usage
+Create Task: Click "+ New Task" (top-right)
 
-Start creating and managing tasks!
+Edit Task: Click the pencil (✏️) icon
 
-Viewing the Database
-Install DB Browser for SQLite
+Delete Task: Click the trash (🗑️) icon
 
-Open the database.db file from the project root
-
-Explore the tasks table and its contents
+Filter Tasks: Use status buttons (All/Pending/In Progress/Completed)
 
 Project Structure
 Copy
-├── app.py             # Main application code
-├── database.db        # SQLite database (auto-generated)
-├── init_db.py         # Database initialization script
-├── static/            # CSS/JS files
+├── app.py
+├── static/
 │   ├── custom.css
 │   └── custom.js
-├── templates/         # HTML templates
+├── templates/
 │   ├── base.html
 │   ├── index.html
 │   └── task_form.html
-└── README.md          # This file
+├── database.db (auto-generated)
+└── README.md
+View Database
+Install DB Browser for SQLite
+
+Open database.db file
+
+View the tasks table
+
 Troubleshooting
-Dependencies not found: Run pip install -r requirements.txt
+Missing dependencies: Run pip install flask
+
+Port conflict: Change port in app.py (modify app.run(port=5001))
 
 Database issues: Delete database.db and restart the app
 
-Port in use: Change port in app.py (last line: app.run(debug=True, port=5001))
+Copy
 
-To add this to your repository:
-
-Create a new file named README.md in your project root
-
-Copy/paste this content
-
-Customize with your details (repository URL, screenshot path, etc.)
-
-Commit and push to GitHub
+**To use this:**
+1. Create a new file named `README.md`
+2. Copy-paste this content
+3. Replace these placeholders:
+   - `YOUR-USERNAME/YOUR-REPO-NAME` with your GitHub details
+   - `image.png` with your actual screenshot filename
+4. Add a `requirements.txt` file using:
+```bash
+pip freeze > requirements.txt
